@@ -19,9 +19,9 @@ class NYImporter:
         sudoku_puzzle = puzzle_data.split('.gameData = ')[1]
         json_puzzle = json.loads(sudoku_puzzle)
 
-        if self.difficulty == 1:
+        if int(self.difficulty) == 1:
             sudoku = json_puzzle['easy']['puzzle_data']['puzzle']
-        elif self.difficulty == 2:
+        elif int(self.difficulty) == 2:
             sudoku = json_puzzle['hard']['puzzle_data']['puzzle']
         else:
             sudoku = json_puzzle['medium']['puzzle_data']['puzzle']

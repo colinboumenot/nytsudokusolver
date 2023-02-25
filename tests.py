@@ -19,7 +19,13 @@ from puzzlecreator import PuzzleCreator
 
 nyt = NYImporter()
 nyt.getNYTPuzzle()
-
+for x in range(9):
+    for y in range(9):
+        print(nyt.puzzle[x][y], end = " ")
+    print()
+print()
+s = Solver()
+result = s.solve(nyt.puzzle)
 for x in range(9):
     for y in range(9):
         print(nyt.puzzle[x][y], end = " ")
